@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>responseexample</name>
+    </assembly>
+    <members>
+        <member name="T:responseexample.Controllers.UserV1Controller">
+            <summary>
+            The UserV1Controller handles operations related to user management in version 1 of the API
+            </summary>
+        </member>
+        <member name="M:responseexample.Controllers.UserV1Controller.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of class
+            </summary>
+            <param name="configuration"></param>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:responseexample.Controllers.UserV1Controller.DeleteUser(System.Int32)">
+            <summary>
+            Deletes a user by their Id
+            </summary>
+            <param name="id">The Id of User to delete</param>
+        </member>
+        <member name="M:responseexample.Controllers.UserV1Controller.GetCustomHttpResponse">
+            <summary>
+            Retrieves a custom HTTP response message.
+            </summary>
+            <returns>message</returns>
+        </member>
+        <member name="M:responseexample.Controllers.UserV1Controller.GetUser(System.Int32)">
+            <summary>
+            Retrieves a user by their Id
+            </summary>
+            <param name="id">The id of user</param>
+            <returns>user with specified Id</returns>
+        </member>
+        <member name="M:responseexample.Controllers.UserV1Controller.GetUserById(System.Int32)">
+            <summary>
+             Retrieves a user by their Id
+            </summary>
+            <param name="id">user id</param>
+            <returns></returns>
+        </member>
+        <member name="M:responseexample.Controllers.UserV1Controller.CreateUserAsync(responseexample.Models.User)">
+             <summary>
+             creates a new user
+             </summary>
+             <param name="user">user object to create</param>
+             <returns>newly created user.</returns>
+             <remarks>
+             Sample request:
+            
+                 POST /User
+                 {
+                    "id": 1,
+                    "name": "jane"
+                    
+                 }
+            
+             </remarks>
+             <response code="201">Returns the newly created user</response>
+             <response code="400">If the user is null</response>
+        </member>
+        <member name="T:responseexample.Controllers.UserV2Controller">
+            <summary>
+            The UserV2Controller handles operations related to user management in version 2 of the API
+            </summary>
+        </member>
+        <member name="M:responseexample.Controllers.UserV2Controller.GetUsersStartingWith(System.Char)">
+            <summary>
+            Retrieves all users whose names start with a specific letter
+            </summary>
+            <param name="letter">starting letter</param>
+            <returns>list of users whose names start with specified letter.</returns>
+        </member>
+    </members>
+</doc>
